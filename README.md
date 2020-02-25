@@ -2,7 +2,7 @@
 基于springcloud集成了 nacos
 ### 当前已集成的功能
 * 加入 nacos 注册服务发现
-* 加入 nacos 的config动态配置
+* 加入 nacos 的 config 动态配置
 * 加入 sentinel 监控
 * 加入 openfeign 完成基于 rest 的负载均衡调用
 
@@ -15,12 +15,18 @@
 | :----: | :----: | :----:  | :----:  |
 |dev     | LC_GROUP  | YAML    | ```spring.profiles.active: dev``` |
 
-
-
-
-### 启动 nacos 后 访问 ``` http://localhost:8848/nacos ``` 默认账户和密码是 ```nacos```
-### 启动 sentinel 后 访问 ``` http://localhost:8080 ``` 默认账户和密码是 ```sentinel```
-
 ### 相关examples
 * [nacos-examples](https://github.com/nacos-group/nacos-examples) 
+
+### 使用本demo测试功能
+#### 测试 nacos config 动态配置 
+* http://localhost:8082/config/get 或  http://localhost:8081/config/get
+* 更改 原先增加 Data Id 为 dev 的配置表，将配置内容改为 ```spring.profiles.active: test``` 再重复上一步
+
+#### 测试 rest 调用
+* http://localhost:8082/config/rest 或 http://localhost:8081/config/rest
+
+#### 监控
+* 启动 nacos 后 访问 ``` http://localhost:8848/nacos ``` 默认账户和密码是 ```nacos```
+* 启动 sentinel 后 访问 ``` http://localhost:8080 ``` 默认账户和密码是 ```sentinel```
 
