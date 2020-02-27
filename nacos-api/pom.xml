@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.lc.cloud.alibaba</groupId>
-    <artifactId>nacos-consumer</artifactId>
+    <artifactId>nacos-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>nacos-consumer</name>
+    <name>nacos-api</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -23,52 +23,9 @@
     </properties>
 
     <dependencies>
-        <!--提供 springboot 及web功能-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <!--提供 springboot 监控指标暴露-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <!--提供 nacos 服务注册发现-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-        <!--提供 nacos 动态配置-->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
-        <!--提供 openfeign 及 ribbon 相关 如果不需要 restTemplate 可以去掉此包-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-        <!--提供 sentinel 监控-->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-        </dependency>
-        <!-- dubbo -->
-        <dependency>
-            <groupId>com.lc.cloud.alibaba</groupId>
-            <artifactId>nacos-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
+            <artifactId>spring-cloud-starter-dubbo</artifactId>
         </dependency>
     </dependencies>
 

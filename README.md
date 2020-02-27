@@ -5,6 +5,7 @@
 * 加入 nacos 的 config 动态配置
 * 加入 sentinel 监控
 * 加入 openfeign 完成基于 rest 的负载均衡调用
+* 加入 dubbo 调用 (注册到nacos)
 
 ### 使用前准备
 * [nacos入门](https://nacos.io/zh-cn/docs/quick-start.html)
@@ -23,6 +24,10 @@
 
 #### 2、测试 rest 调用
 * 访问 http://localhost:8082/config/rest 或 http://localhost:8081/config/rest
+
+#### 3、测试 dubbo 调用
+* 访问 http://localhost:8081/dubbo/get
+
 
 #### 3、监控
 * 启动 nacos 后 访问 ``` http://localhost:8848/nacos ``` 默认账户和密码是 ```nacos```

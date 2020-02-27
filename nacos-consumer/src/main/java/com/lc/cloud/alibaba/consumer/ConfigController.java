@@ -1,6 +1,7 @@
 package com.lc.cloud.alibaba.consumer;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.lc.cloud.alibaba.api.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -19,7 +20,6 @@ public class ConfigController {
     String active;
     @Autowired
     RestTemplate restTemplate;
-
     /**
      * http://localhost:8081/config/get
      */
