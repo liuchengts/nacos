@@ -11,7 +11,7 @@
 * [nacos入门](https://nacos.io/zh-cn/docs/quick-start.html)
 * [sentinel入门](https://github.com/alibaba/Sentinel/wiki/%E6%8E%A7%E5%88%B6%E5%8F%B0#2-%E5%90%AF%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8F%B0)
 * [use-nacos-with-dubbo](https://nacos.io/zh-cn/docs/use-nacos-with-dubbo.html)
-* 
+
 ### 使用本demo测试功能
 #### 1、测试 nacos config 动态配置 
 * 在nacos中增加一个配置列表 
@@ -36,3 +36,6 @@
 
 ### 相关examples
 * [nacos-examples](https://github.com/nacos-group/nacos-examples) 
+
+### docker化
+* [nacos docker](https://nacos.io/en-us/docs/quick-start-docker.html)  
