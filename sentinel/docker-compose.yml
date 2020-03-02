@@ -1,0 +1,8 @@
+sentinel:
+  container_name: sentinel-dashboard
+  build: docker
+  restart: always
+  ports:
+    - "8858:8080"
+  environment:
+      TZ : "Asia/Shanghai"

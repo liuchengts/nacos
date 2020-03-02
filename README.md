@@ -39,3 +39,4 @@
 
 ### docker化
 * [nacos docker](https://nacos.io/en-us/docs/quick-start-docker.html)  
+* sentinel docker 增加基础的docker镜像及基于1.7.1的阿里云镜像

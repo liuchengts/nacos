@@ -1,0 +1,8 @@
+sentinel:
+  container_name: sentinel-dashboard
+  images: registry.cn-hangzhou.aliyuncs.com/lcts/sentinel-dashboard:1.7.1
+  restart: always
+  ports:
+    - "8858:8080"
+  environment:
+      TZ : "Asia/Shanghai"
