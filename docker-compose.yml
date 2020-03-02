@@ -4,5 +4,6 @@ sentinel:
   restart: always
   ports:
     - "8858:8080"
+    - "8719:8719"
   environment:
       TZ : "Asia/Shanghai"
