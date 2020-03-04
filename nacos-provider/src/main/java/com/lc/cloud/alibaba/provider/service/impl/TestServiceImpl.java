@@ -5,8 +5,19 @@ import org.apache.dubbo.config.annotation.Service;
 
 @Service
 public class TestServiceImpl implements TestService {
+
     @Override
     public String get(String str) {
-        return str + System.currentTimeMillis();
+        return "get1 TestServiceImpl" + System.currentTimeMillis();
+    }
+
+    @Override
+    public String get2(String str) {
+        return "get2 TestServiceImpl" + System.currentTimeMillis();
+    }
+
+    @Override
+    public String get3(String str) {
+        return "get3 TestServiceImpl" + System.currentTimeMillis();
     }
 }
