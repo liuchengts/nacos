@@ -1,6 +1,7 @@
 package com.lc.cloud.alibaba.consumer.config;
 
 import com.alibaba.csp.sentinel.adapter.servlet.CommonFilter;
+import com.alibaba.csp.sentinel.annotation.aspectj.SentinelResourceAspect;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,11 +9,22 @@ import org.springframework.context.annotation.Configuration;
 import javax.servlet.Filter;
 
 /**
- * web层加入sentinel
+ * Sentinel 配置
  */
 @Configuration
-public class SentinelWebFilterConfig {
+public class SentinelConfiguration {
 
+    /**
+     * 配置方法级别的Sentinel aop
+     */
+    @Bean
+    public SentinelResourceAspect sentinelResourceAspect() {
+        return new SentinelResourceAspect();
+    }
+
+    /**
+     * 让web层请求都经过 sentinelFilter
+     */
     @Bean
     public FilterRegistrationBean sentinelFilterRegistration() {
         FilterRegistrationBean<Filter> registration = new FilterRegistrationBean<>();
