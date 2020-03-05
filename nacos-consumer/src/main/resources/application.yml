@@ -16,3 +16,5 @@ dubbo:
     port: -1
   registry:
     address: nacos://localhost:8848  #80不能省略
+  consumer:
+    check: false   #不检查dubbo服务依赖
