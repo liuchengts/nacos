@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.servlet.Filter;
 
 /**
- * Sentinel 配置
+ * Sentinel 集成配置
  */
 @Configuration
 public class SentinelConfiguration {

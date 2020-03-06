@@ -6,3 +6,45 @@ sentinel:
     - "8858:8080"
   environment:
       TZ : "Asia/Shanghai"
+mysql-provider:
+  container_name: provider-mysql
+  image: mysql:5.6.23
+  restart: always
+  ports:
+    - "3307:3306"
+  environment:
+    TZ : "Asia/Shanghai"
+    MYSQL_ROOT_PASSWORD: 123456
+    MYSQL_DATABASE: seata
+  command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+mysql-consumer:
+  container_name: consumer-mysql
+  image: mysql:5.6.23
+  restart: always
+  ports:
+    - "3308:3306"
+  environment:
+    TZ : "Asia/Shanghai"
+    MYSQL_ROOT_PASSWORD: 123456
+    MYSQL_DATABASE: seata
+  command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+seata-server:
+  image: seataio/seata-server
+  container_name: seata-server
+  restart: always
+  ports:
+    - "8091:8091"
+  environment:
+    - SEATA_PORT=8091
+    - STORE_MODE=file
+
+rocketmq:
+  container_name: rocketmq
+  image: rocketmqinc/rocketmq:latest
+  restart: always
+  ports:
+    - "9876:9876"
+
+

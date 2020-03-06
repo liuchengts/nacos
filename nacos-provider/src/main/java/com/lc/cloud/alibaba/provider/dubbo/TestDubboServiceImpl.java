@@ -1,10 +1,10 @@
-package com.lc.cloud.alibaba.provider.service.impl;
+package com.lc.cloud.alibaba.provider.dubbo;
 
-import com.lc.cloud.alibaba.api.TestService;
+import com.lc.cloud.alibaba.api.TestDubboService;
 import org.apache.dubbo.config.annotation.Service;
 
 @Service
-public class TestServiceImpl implements TestService {
+public class TestDubboServiceImpl implements TestDubboService {
 
     @Override
     public String get(String str) {

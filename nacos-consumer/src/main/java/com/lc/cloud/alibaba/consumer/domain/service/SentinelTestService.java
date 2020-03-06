@@ -1,4 +1,4 @@
-package com.lc.cloud.alibaba.consumer.service;
+package com.lc.cloud.alibaba.consumer.domain.service;
 
 public interface SentinelTestService {
     String get(String str);

@@ -1,17 +1,17 @@
-package com.lc.cloud.alibaba.consumer.service;
+package com.lc.cloud.alibaba.consumer.domain.service.impl;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
-import com.alibaba.csp.sentinel.slots.block.BlockException;
-import com.lc.cloud.alibaba.api.TestService;
+import com.lc.cloud.alibaba.api.TestDubboService;
 import com.lc.cloud.alibaba.consumer.fuse.SentinelTestServiceBlockHandler;
 import com.lc.cloud.alibaba.consumer.fuse.SentinelTestServiceFallbackHandler;
+import com.lc.cloud.alibaba.consumer.domain.service.SentinelTestService;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Service;
 
 @Service
 public class SentinelTestServiceImpl implements SentinelTestService {
     @Reference
-    TestService testService;
+    TestDubboService testDubboService;
 
     /*******
      * 注意 ：若 blockHandler 和 fallback 都进行了配置
@@ -24,7 +24,7 @@ public class SentinelTestServiceImpl implements SentinelTestService {
     @Override
     public String get(String str) {
         if (1 == 1) throw new RuntimeException("自定义异常");
-        return testService.get(str);
+        return testDubboService.get(str);
     }
 
     @SentinelResource(blockHandler = "get2BlockHandler",
@@ -32,14 +32,14 @@ public class SentinelTestServiceImpl implements SentinelTestService {
     @Override
     public String get2(String str) {
         if (1 == 1) throw new RuntimeException("自定义异常");
-        return testService.get2(str);
+        return testDubboService.get2(str);
     }
 
     @SentinelResource(fallback = "get3Fallback")
     @Override
     public String get3(String str) {
         if (1 == 1) throw new RuntimeException("自定义异常");
-        return testService.get3(str);
+        return testDubboService.get3(str);
     }
 
     //这里的服务降级或回退方法只需要  public 修饰

@@ -9,7 +9,24 @@ spring:
       discovery:
         server-addr: localhost:8848  #Nacos服务器侦听器的IP和端口 #80不能省略
         weight:  10 # 值范围：1到100。值越大,权重越大
+    alibaba:
+      seata:
+        tx-service-group: tx-service-group
+  #    stream:
+  #      rocketmq:
+  #        binder:
+  #          name-server: localhost:9876
   main.allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:mysql://localhost:3307/seata?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=CONVERT_TO_NULL&allowMultiQueries=true
+    username: root
+    password:  123456
+    driverClassName: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
 dubbo:
   protocol:
     name: dubbo
@@ -17,4 +34,6 @@ dubbo:
   registry:
     address: nacos://localhost:8848  #80不能省略
   scan:
-    base-packages: com.lc.cloud.alibaba.provider.service.impl
+    base-packages: com.lc.cloud.alibaba.provider.dubbo
+  cloud:
+    subscribed-services: nacos-consumer

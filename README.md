@@ -7,6 +7,7 @@
 * 加入 openfeign 完成基于 rest 的负载均衡调用
 * 加入 dubbo 调用 (注册到nacos)
 * 加入 sentinel 流控、回调等处理
+* 加入 seata 分布式事务
 
 ### 使用前准备
 * [nacos入门](https://nacos.io/zh-cn/docs/quick-start.html)
@@ -14,6 +15,12 @@
 * [use-nacos-with-dubbo](https://nacos.io/zh-cn/docs/use-nacos-with-dubbo.html)
 * [Sentinel](https://github.com/alibaba/Sentinel/wiki/%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6%E7%9A%84%E9%80%82%E9%85%8D#dubbo) 
 * [SentinelResource](https://github.com/alibaba/Sentinel/wiki/%E6%B3%A8%E8%A7%A3%E6%94%AF%E6%8C%81) 
+* [seata](https://seata.io/zh-cn/docs/user/quickstart.html) 
+* [Spring Cloud 快速集成 Seata](https://github.com/seata/seata-samples/blob/master/doc/quick-integration-with-spring-cloud.md) 
+
+### 运行本示例必要的环境准备
+* 执行 
+``` docker-compose -f nacos/docker-compose.yml ``` 
 
 ### 使用本demo测试功能
 #### 1、测试 nacos config 动态配置 
@@ -32,7 +39,6 @@
 #### 3、测试 dubbo 调用
 * 访问 http://localhost:8081/dubbo/get
 
-
 #### 3、监控
 * 启动 nacos 后 访问 ``` http://localhost:8848/nacos ``` 默认账户和密码是 ```nacos```
 * 启动 sentinel 后 访问 ``` http://localhost:8080 ``` 默认账户和密码是 ```sentinel```
@@ -42,6 +48,11 @@
 * 访问 http://localhost:8081/dubbo/get2  在sentinel 控制台添加 流控规则后快速多次访问触发流控
 * 访问 http://localhost:8081/dubbo/get3  触发 fallback
 
+#### 5、分布式事务
+#####  使用前准备
+1、 将 ``` nacos/seata ```文件夹下的文件复制到 ```seata-server/resources``` 
+* ```docker cp nacos/seata/file.conf seata-server:/seata-server/resources```
+* ```docker cp nacos/seata/registry.conf seata-server:/seata-server/resources```
 
 ### 相关examples
 * [nacos-examples](https://github.com/nacos-group/nacos-examples) 
