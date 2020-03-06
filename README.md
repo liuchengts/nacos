@@ -48,7 +48,8 @@
 * 访问 http://localhost:8081/dubbo/get2  在sentinel 控制台添加 流控规则后快速多次访问触发流控
 * 访问 http://localhost:8081/dubbo/get3  触发 fallback
 
-#### 5、分布式事务
+#### 5、分布式事务 
+##### 注意：``` @SentinelResource(fallback = "fallbackHandler") ``` 会使异常后不触发 ```@GlobalTransactional ``` 
 #####  使用前准备
 1、 将 ``` nacos/seata ```文件夹下的文件复制到 ```seata-server/resources``` 
 * ```docker cp seata/file.conf seata-server:/seata-server/resources```
