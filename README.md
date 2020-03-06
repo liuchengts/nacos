@@ -55,6 +55,7 @@
 * ```docker cp seata/file.conf seata-server:/seata-server/resources```
 * ```docker cp seata/registry.conf seata-server:/seata-server/resources```
 * ```docker restart seata-server```
+
 2、测试分布式事务提交
 * 访问 http://localhost:8081/account/add/1?addAmount=100.00  验证正常提交
 * 访问 http://localhost:8081/account/use/1?useAmount=10.00   验证异常回滚
