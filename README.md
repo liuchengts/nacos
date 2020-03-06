@@ -65,6 +65,6 @@
 * [seata-samples](https://github.com/seata/seata-samples) 
 
 ### docker化
-* [nacos docker](https://nacos.io/en-us/docs/quick-start-docker.html)  
+* [nacos docker](https://nacos.io/en-us/docs/quick-start-docker.html) 为官方推荐镜像  
 * sentinel docker 增加基础的docker镜像及基于1.7.1的阿里云镜像
 * seata docker 为官方推荐镜像
