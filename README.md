@@ -53,10 +53,15 @@
 1、 将 ``` nacos/seata ```文件夹下的文件复制到 ```seata-server/resources``` 
 * ```docker cp nacos/seata/file.conf seata-server:/seata-server/resources```
 * ```docker cp nacos/seata/registry.conf seata-server:/seata-server/resources```
+2、测试分布式事务提交
+* 访问 http://localhost:8081/account/add/1?addAmount=100.00  验证正常提交
+* 访问 http://localhost:8081/account/use/1?useAmount=10.00   验证异常回滚
 
 ### 相关examples
 * [nacos-examples](https://github.com/nacos-group/nacos-examples) 
+* [seata-samples](https://github.com/seata/seata-samples) 
 
 ### docker化
 * [nacos docker](https://nacos.io/en-us/docs/quick-start-docker.html)  
 * sentinel docker 增加基础的docker镜像及基于1.7.1的阿里云镜像
+* seata docker 为官方推荐镜像
