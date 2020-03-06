@@ -1,5 +1,5 @@
 # nacos
-基于springcloud集成了 nacos
+spring cloud alibaba
 ### 当前已集成的功能
 * 加入 nacos 注册服务发现
 * 加入 nacos 的 config 动态配置
