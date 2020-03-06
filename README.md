@@ -19,11 +19,11 @@
 * [Spring Cloud 快速集成 Seata](https://github.com/seata/seata-samples/blob/master/doc/quick-integration-with-spring-cloud.md) 
 
 ### 运行本示例必要的环境准备
+* ``` docker-compose -f nacos/docker-compose.yml ``` 
+
 * ```git clone https://github.com/nacos-group/nacos-docker.git```
 
 * ``` docker-compose -f nacos-docker/example/standalone-derby.yaml up -d```
-
-* ``` docker-compose -f nacos/docker-compose.yml ``` 
 
 ### 使用本demo测试功能
 #### 1、测试 nacos config 动态配置 
