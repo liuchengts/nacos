@@ -20,9 +20,9 @@
 
 ### 运行本示例必要的环境准备
 * 执行
-```git clone https://github.com/nacos-group/nacos-docker.git```
-``` cd nacos-docker```
-``` docker-compose -f example/standalone-derby.yaml up -d```
+1、```git clone https://github.com/nacos-group/nacos-docker.git```
+
+2、``` docker-compose -f nacos-docker/example/standalone-derby.yaml up -d```
 
 * 执行 
 ``` docker-compose -f nacos/docker-compose.yml ``` 
