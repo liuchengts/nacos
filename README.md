@@ -1,4 +1,4 @@
-# nacos 222
+# nacos   
 spring cloud alibaba
 ### 当前已集成的功能
 * 加入 nacos 注册服务发现
@@ -53,8 +53,8 @@ spring cloud alibaba
 
 #### 5、分布式事务 
 ##### 注意：``` @SentinelResource(fallback = "fallbackHandler") ``` 会使异常后不触发 ```@GlobalTransactional ``` 
-#####  使用前准备
-1、 将 ``` nacos/seata ```文件夹下的文件复制到 ```seata-server/resources``` 
+#####  如果没有更改过 seata-server 任何配置 无需进行下面的第一步操作
+1、将 ``` nacos/seata ```文件夹下的文件复制到 ```seata-server/resources``` 
 * ```docker cp seata/file.conf seata-server:/seata-server/resources```
 * ```docker cp seata/registry.conf seata-server:/seata-server/resources```
 * ```docker restart seata-server```
