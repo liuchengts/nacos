@@ -69,5 +69,5 @@ spring cloud alibaba
 
 ### docker化
 * [nacos docker](https://nacos.io/en-us/docs/quick-start-docker.html) 为官方推荐镜像  
-* sentinel docker 增加基础的docker镜像及基于1.7.1的阿里云镜像
-* seata docker 为官方推荐镜像
+* sentinel docker [基于alpine的docker源码镜像](https://github.com/liuchengts/nacos/tree/master/sentinel) 或 [已上传到阿里云公共仓库的镜像](https://cr.console.aliyun.com/repository/cn-hangzhou/lcts/sentinel-dashboard/details)
+* [seata docker](https://seata.io/zh-cn/docs/ops/deploy-by-docker.html)
