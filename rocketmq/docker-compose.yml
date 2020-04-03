@@ -5,4 +5,8 @@ rocketmq:
   ports:
     - "10911:10911"
   environment:
-      TZ : "Asia/Shanghai"
+    TZ: "Asia/Shanghai"
+    JAVA_HOME: "/usr/lib/jvm/java-1.8.0-openjdk-amd64"
+    JRE_HOME: "${JAVA_HOME}/jre"
+    CLASSPATH: ".:${JAVA_HOME}/lib:${JRE_HOME}/lib"
+    PATH: "${JAVA_HOME}/bin:$PATH"
