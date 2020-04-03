@@ -3,6 +3,6 @@ rocketmq:
   build: docker
   restart: always
   ports:
-    - "9876:9876"
+    - "10911:10911"
   environment:
       TZ : "Asia/Shanghai"

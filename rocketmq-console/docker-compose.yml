@@ -1,0 +1,10 @@
+rocketmq-console:
+  container_name: rocketmq-console
+  build: docker
+  restart: always
+  ports:
+    - "9879:8080"
+  environment:
+    TZ: "Asia/Shanghai"
+    JAVA_OPTS: "-Drocketmq.namesrv.addr=127.0.0.1:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false"
+

@@ -40,11 +40,12 @@ seata-server:
     - SEATA_PORT=8091
     - STORE_MODE=file
 
-rocketmq:
-  container_name: rocketmq
-  image: rocketmqinc/rocketmq:latest
-  restart: always
-  ports:
-    - "9876:9876"
+#rocketmq:
+#  container_name: rocketmq
+#  image: rocketmqinc/rocketmq:latest
+#  restart: always
+#  ports:
+#    - "9876:9876"
+
 
 
