@@ -67,7 +67,7 @@ spring cloud alibaba
 * [nacos-examples](https://github.com/nacos-group/nacos-examples) 
 * [seata-samples](https://github.com/seata/seata-samples) 
 
-### docker化
+### 本项目需要部署的一些组件
 * [nacos docker](https://nacos.io/en-us/docs/quick-start-docker.html) 为官方推荐镜像  
 * sentinel docker [基于alpine的docker源码镜像](https://github.com/liuchengts/nacos/tree/master/sentinel) 或 [已上传到阿里云公共仓库的镜像](https://cr.console.aliyun.com/repository/cn-hangzhou/lcts/sentinel-dashboard/details)
 * [seata docker](https://seata.io/zh-cn/docs/ops/deploy-by-docker.html)
