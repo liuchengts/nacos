@@ -4,6 +4,7 @@ rocketmq:
   restart: always
   ports:
     - "10911:10911"
+    - "9876:9876"
   environment:
     TZ: "Asia/Shanghai"
     JAVA_HOME: "/usr/lib/jvm/java-1.8.0-openjdk-amd64"
