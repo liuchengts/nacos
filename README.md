@@ -21,9 +21,9 @@ spring cloud alibaba
 ### 运行本示例必要的环境准备
 * ``` docker-compose -f nacos/docker-compose.yml ``` 
 
-* ```git clone https://github.com/nacos-group/nacos-docker.git```
+* ``` git clone https://github.com/nacos-group/nacos-docker.git ```
 
-* ``` docker-compose -f nacos-docker/example/standalone-derby.yaml up -d```
+* ``` docker-compose -f nacos-docker/example/standalone-derby.yaml up -d ```
 
 ### 使用本demo测试功能
 #### 1、测试 nacos config 动态配置 

@@ -12,10 +12,6 @@ spring:
     alibaba:
       seata:
         tx-service-group: tx-service-group
-  #    stream:
-  #      rocketmq:
-  #        binder:
-  #          name-server: localhost:9876
   main.allow-bean-definition-overriding: true
   datasource:
     url: jdbc:mysql://localhost:3307/seata?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=CONVERT_TO_NULL&allowMultiQueries=true
@@ -27,6 +23,16 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+  rocketmq:
+    name-server-address: localhost:9876
+    # 可选, 如果无需发送消息则忽略该配置
+    producer-group: ${spring.application.name}-producer
+    # 发送超时配置毫秒数, 可选, 默认3000
+    send-msg-timeout: 5000
+    # 追溯消息具体消费情况的开关，默认打开
+    #trace-enabled: false
+    # 是否启用VIP通道，默认打开
+    #vip-channel-enabled: false
 dubbo:
   protocol:
     name: dubbo
