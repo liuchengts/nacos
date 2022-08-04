@@ -5,7 +5,7 @@ ARG VERSION=4.7.0
 ENV HOME=rocketmq-all-${VERSION}-bin-release
 RUN apt-get update \
     && apt-get -y install wget unzip openjdk-8-jdk \
-    && wget -O rocketmq.zip https://www.apache.org/dyn/closer.cgi?path=rocketmq/${VERSION}/rocketmq-all-${VERSION}-bin-release.zip \
+    && wget -O rocketmq.zip https://archive.apache.org/dist/rocketmq/${VERSION}/rocketmq-all-${VERSION}-bin-release.zip \
     && unzip rocketmq.zip \
     && rm -rf rocketmq.zip
 EXPOSE 10911
